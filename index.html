@@ -1,148 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Memory game</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<script src="https://kit.fontawesome.com/28c854e422.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
-	<!-- style was inspired by CARBON => https://www.carbon.now.sh -->
-	<div class="carbon">
-		<div class="panel">
-			<div class="panel__one circle"></div>
-			<div class="panel__two circle"></div>
-			<div class="panel__three circle">
-				<!--<input type="checkbox" class="toggler3"> -->
-			</div>
-		</div>
-		<!-- end of panel -->
-		<div class="container">
+    <div class="info"><button class="btn-sound"></button><audio id="theme-song" src="audio/background-music.wav" loop="loop"></audio>
+        <div class="score">
+            <div class="turns">Turns: <span>2</span></div>
+            <div class="attempts">Attempts: <span>0</span></div>
+            <div class="wins">Wins: <span>0</span></div>
+        </div>
+    </div>
+    <main>
+        <div class="card" data-type="flower" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="mushroom" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="star" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="flower" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="mushroom" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="star" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="flower" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="mushroom" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="star" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="flower" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="mushroom" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="star" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="1up" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="coin10" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="coin20" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="1up" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="coin10" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card" data-type="coin20" data-matched="false">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </main>
+    <div class="success">
+        <div class="success-icon" data-type="mushroom">
+            <div class="front"></div>
+        </div>
+        <h2 class="success-message">Nice work! </h2>
+        <div class="score">
+            <div class="turns">Turns <span>2</span></div>
+            <div class="attempts">Attempts <span>0</span></div>
+            <div class="wins">Wins <span>0</span></div>
+            <div class="attempts-overall">Attempts Overall <span>0</span></div>
+        </div><button class="btn-continue">Continue</button>
+    </div>
 
-			<div class="box box1">
-				<div class="box backside">
-					<i class="far fa-gem"></i>
-				</div>
-			</div>
+<!-- <script src="scripts/sweetalert2.all.min.js"></script> -->
 
-			<div class="box box2">
-				<div class="box backside">
-					<i class="far fa-gem"></i>
-				</div>
-			</div>
-
-			<div class="box box3">
-				<div class="box backside">
-					<i class="fas fa-bomb"></i>
-				</div>
-			</div>
-
-			<div class="box box4">
-				<div class="box backside">
-					<i class="fas fa-bomb"></i>
-				</div>
-			</div>
-
-			<div class="box box5">
-				<div class="box backside">
-					<i class="fas fa-dizzy"></i>
-				</div>
-			</div>
-
-			<div class="box box6">
-				<div class="box backside">
-					<i class="fas fa-dizzy"></i>
-				</div>
-			</div>
-
-			<div class="box box7">
-				<div class="box backside">
-					<i class="fas fa-cannabis"></i>
-				</div>
-			</div>
-
-			<div class="box box8">
-				<div class="box backside">
-					<i class="fas fa-cannabis"></i>
-				</div>
-			</div>
-
-			<div class="box box9">
-				<div class="box backside">
-					<i class="fas fa-helicopter"></i>
-				</div>
-			</div>
-
-			<div class="box box10">
-				<div class="box backside">
-					<i class="fas fa-helicopter"></i>
-				</div>
-			</div>
-
-			<div class="box box11">
-				<div class="box backside">
-					<i class="fas fa-chess"></i>
-				</div>
-			</div>
-
-			<div class="box box12">
-				<div class="box backside">
-					<i class="fas fa-chess"></i>
-				</div>
-			</div>
-
-			<div class="box box13">
-				<div class="box backside">
-					<i class="fab fa-js-square"></i>
-				</div>
-			</div>
-
-			<div class="box box14">
-				<div class="box backside">
-					<i class="fab fa-js-square"></i>
-				</div>
-			</div>
-
-			<div class="box box15">
-				<div class="box backside">
-					<i class="fas fa-cocktail"></i>
-				</div>
-			</div>
-
-			<div class="box box16">
-				<div class="box backside">
-					<i class="fas fa-cocktail"></i>
-				</div>
-			</div>
-
-			<div class="box box17">
-				<div class="box backside">
-					<i class="fas fa-dice"></i>
-				</div>
-			</div>
-
-			<div class="box box18">
-				<div class="box backside">
-					<i class="fas fa-dice"></i>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!-- end of MAIN   -->
-	<div class="carbon tabbar">
-
-		<div>
-			<span>{</span>
-			<h4>
-				<span>moves:</span>
-				<span class="counter"> 0 </span>,
-				<span>time_elapsed:</span>
-				<span class="time">00:00</span>
-			</h4>
-			<span>}</span>
-
-			<button onclick="startGame()">START</button>
-		</div>
-
-	</div>
-	<!-- <p>by Roektman.com</p> -->
+<script src="scripts/scripts1.js"></script>
+    
 </body>
 </html>
