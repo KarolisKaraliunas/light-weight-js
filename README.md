@@ -12,7 +12,7 @@ The user has to memorise each card by selecting and viewing the image. The game 
 Therefore only two attemps are allowed for the user and then the cards are reset back to their original state.
 
 ### General
-The comments for any functions can be found within the project, for the lines thta are not commented, they are self-explanitory.
+The comments for any functions can be found within the project, for the lines that are not commented, they are self-explanitory.
 Resources are listed below.
 
 > Enjoy the game ! 
